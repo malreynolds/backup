@@ -1,0 +1,212 @@
+.body {
+    margin-top: 40px;
+    position: relative;
+}
+
+.filters-menu {
+
+    font-weight: 300;
+    font-family: "HelveticaNeue Thin", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-stretch: normal;
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    z-index: 10000;
+    box-shadow: 5px 5px 10px lightgrey;
+    > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        > li {
+            min-width: 300px;
+            display: block;
+            color: #999;
+            position: relative;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            -webkit-transition: background 0.1s ease-in-out;
+            -moz-transition: background 0.1s ease-in-out;
+            transition: background 0.1s ease-in-out;
+            &:nth-child(odd) {
+                background: white;
+                &:hover {
+                    background: #47a3da;
+                    color: #fff;
+                }
+            }
+            &:nth-child(even) {
+                background: #e8e7e6;
+                &:hover {
+                    background: #47a3da;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &.active {
+        display: none;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    // A hack to offset the positioning to top right
+    .dropright-container {
+        display: inline;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: auto;
+        // top: 0%;
+        left: 100%;
+    }
+    .visible-container {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+    .hover .dropright {
+        display: inline-block;
+        position: absolute;
+        // width: auto;
+        width: 768px;
+        white-space: no-wrap;
+        .dropright-nav > ul > li {
+            // display: inline-block;
+        }
+    }
+    .dropright {
+        display: none;
+    }
+}
+
+
+.filters-toggle {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #47a3da;
+    color: #fff;
+}
+
+/* Icon Wobble Horizontal */
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.hvr-icon-wobble-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-icon-wobble-horizontal:before {
+  content: "\f061";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-wobble-horizontal:hover:before, .hvr-icon-wobble-horizontal:focus:before, .hvr-icon-wobble-horizontal:active:before {
+  -webkit-animation-name: hvr-icon-wobble-horizontal;
+  animation-name: hvr-icon-wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+

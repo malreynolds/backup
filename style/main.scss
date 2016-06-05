@@ -1,0 +1,38 @@
+@import 'bootstrap';
+@import 'footer';
+@import 'header';
+@import 'grid';
+@import 'sidebar';
+@import 'dropright';
+@import 'metric';
+@import 'tabbed-data-container';
+
+@font-face{
+    font-family:"HelveticaNeue Thin";
+    src:url("../static/HelveticaNeue Thin.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 240px; // bottom is height of footer plus 40 pixels for spacing
+}
+
+.main-breadcrumb {
+    background-color: white;
+}
+
+
+#driver-performance-app {
+    position: relative;
+    padding-left: 100px;
+}
+

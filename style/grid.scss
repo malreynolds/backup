@@ -1,0 +1,41 @@
+@import '../node_modules/ag-grid/dist/styles/ag-grid.css';
+@import './theme-blue.css';
+// @import '../ag-grid-themes/dist/theme-clarity-alizarin.css';
+// @import '../ag-grid-themes/dist/theme-clarity-belize-hole.css';
+// @import '../ag-grid-themes/dist/theme-clarity-carrot.css';
+// @import '../ag-grid-themes/dist/theme-clarity-green-sea.css';
+// @import '../ag-grid-themes/dist/theme-clarity-midnight-blue.css';
+// @import '../ag-grid-themes/dist/theme-clarity-nephritis.css';
+// @import '../ag-grid-themes/dist/theme-clarity-pumpkin.css';
+// @import '../ag-grid-themes/dist/theme-clarity-wet-asphalt.css';
+// @import '../ag-grid-themes/dist/theme-clarity-wisteria.css';
+// @import '../ag-grid-themes/dist/theme-material.css';
+// @import '../ag-grid-themes/dist/theme-freshx.css';
+
+
+label {
+    font-weight: normal !important;
+}
+
+.div-percent-bar {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.div-percent-value {
+    position: absolute;
+    padding-left: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.div-outer-div {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+#driver-performance-table {
+    width: 90%;
+}

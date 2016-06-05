@@ -1,0 +1,57 @@
+.metric-item {
+    &.danger {
+        color: red;
+    }
+    &.success {
+        color: green;
+    }
+    &.warning {
+        color: #f0ad4e;
+    }
+    .metric-values {
+        font-weight: 600;
+    }
+    padding: 20px;
+    display: inline-block;
+    min-width: 250px;
+    .progress{
+        height: 3px;
+    }
+    .metric-item-title {
+        font-weight: 300;
+        font-family: "HelveticaNeue Thin", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+    .metric-graph {
+        display: inline-block;
+        width: 200px;
+        padding: 10px;
+    }
+}
+
+.metric-panel {
+    font-weight: 100;
+    font-stretch: normal;
+    font-size: 22px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.metric-panel-title {
+    font-family: "HelveticaNeue Thin", "Helvetica", Helvetica, Arial, sans-serif;
+    padding: 20px;
+    font-weight: 300;
+    position: relative;
+    // Cool hack to do the semi border at the bottom of the title
+    &:after {
+        content:'';
+        width: 80px;
+        height: 1px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        background: black;
+    }
+}

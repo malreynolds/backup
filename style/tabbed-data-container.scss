@@ -1,0 +1,18 @@
+.tabbed-data-container {
+    text-align: center;
+    padding: 10px;
+    .filters-title, .data-title, .tabs-container{
+        display: inline-block;
+    }
+    .filters-title {
+        float: left;
+    }
+    .tabs-container {
+        float: right;
+        margin-top: 10px;
+    }
+
+    .filters-title, .data-title {
+        font-family: "HelveticaNeue Thin", "Helvetica", Helvetica, Arial, sans-serif;
+    }
+}

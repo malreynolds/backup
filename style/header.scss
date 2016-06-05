@@ -1,0 +1,191 @@
+#velocity-navbar {
+    .navbar-collapse {
+        // overflow-x: hidden;
+    }
+    > nav {
+        background-color: #eeeeee;
+        border: none;
+    }
+    box-shadow: 20px 20px 40px #aaaaaa;
+    .brand-logo {
+        width: 200px;
+        position: relative;
+        > img {
+              margin: auto;
+              position: absolute;
+              top: 0; left: 0; bottom: 0; right: 0;
+        }
+    }
+    // Need to override Bootstrap button defaults
+    #language-switcher {
+        border: none;
+        background-color: #eeeeee;
+        + ul > li > a {
+            width: 50px;
+        }
+    }
+    .navbar-menu {
+        list-style: none;
+        padding: 0px;
+        box-sizing: border-box;
+        margin-top: 14px;
+        .nav-item {
+            color: #595959;
+            position: relative;
+            font-size: 14px;
+            padding: 10px;
+            text-align: center;
+            white-space: nowrap;
+            &:hover {
+                color: #008cba;
+                cursor: pointer;
+                .nav-dropdown {
+                    display: block;
+                }
+            }
+            a {
+                // Need to replicate this because of bootstrap
+                &:hover {
+                    color: #008cba;
+                }
+                color: inherit;
+                text-decoration: none;
+                padding: 0px;
+                background-color: inherit;
+            }
+            .nav-dropdown {
+                box-shadow: 20px 40px 140px #666666;
+                background-color: rgb(247, 247, 247);
+                position: absolute;
+                list-style-type: none;
+                display: none;
+                min-width: 100%;
+                left: 0;
+                text-align: left;
+                z-index: 1000;
+                top: 40px; // This needs to be same as dropdown height
+                padding: 0px;
+                a {
+                    display: inline-block;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: #595959;
+                    &:hover {
+                        background-color: inherit;
+                        color: #008cba;
+                    }
+                }
+            }
+        }
+        > li {
+            min-width: 0px;
+            > a {
+                flex: 0 1 auto;
+                min-width: 50px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &:first-child{
+                width: 48px;
+            }
+            &:not(:first-child){
+                justify-content: center;
+                display: flex;
+                flex: 1;
+                -webkit-flex: 1;
+            }
+            &:nth-child(odd) {
+                background: #dddddd;
+            }
+            &:nth-child(even) {
+                background: #e8e7e6;
+            }
+        }
+    }
+    .navbar-controls {
+        // width: 80%;
+        display: flex;
+        margin-top: 14px;
+        .right-control {
+            align-self: flex-end;
+            justify-content: flex-end;
+            width: 40%;
+            margin-left: auto;
+            display: flex;
+            .logout-button {
+                padding-top: 12px;
+                padding-bottom: 10px;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 13px;
+                a {
+                    text-decoration: none;
+                    white-space: nowrap;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    background: #aaaaaa;
+                    color: #eeeeee;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .nav-customer-info {
+            align-self: flex-start;
+            width: 60%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            position: relative;
+            margin-right: 35px;
+            .nav-customer-name {
+                font-size: 15px;
+                box-sizing: border-box;
+                padding-right: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            a {
+                position: absolute;
+                color: black;
+            }
+        }
+    }
+}
+
+// Most of this is necessary because we use Bootstrap. Needs removing once
+// navbar is bootstrap free.
+@media (min-width: 768px) {
+    .brand-logo {
+        height: 112px !important;
+    }
+    .navbar-menu {
+        display: flex;
+        width: 75%;
+        -webkit-display: flex;
+
+       .nav-item {
+            &.active {
+                border-bottom-style: solid;
+                border-width: 4px;
+                border-color: #4895ce;
+                padding-bottom: 4px !important; // padding needs to be same as border-width
+            }
+       }
+    }
+    .navbar-controls {
+        width: 75% !important;
+    }
+}
+
+// Remove the home icon in collapsed view
+@media (max-width: 768px) {
+    #velocity-navbar .navbar-menu .nav-item:first-child {
+        display: none;
+    }
+}
+
