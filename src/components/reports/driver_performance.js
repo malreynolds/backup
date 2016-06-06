@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import MyApp from '../grid/myApp.jsx';
 import DataGraph from './graph.js';
-import Sidebar from '../sidebar.js';
+import Sidebar, {
+  SidebarItem,
+  DateRangeDropright,
+  EventTypeDropright,
+  ActionsDropright,
+} from '../sidebar.js';
 import Dropright from '../dropright.js';
 import TabbedDataContainer from '../tabbed-data-container';
 import MetricPanel from '../metric-panel.js';
@@ -17,7 +22,23 @@ export default class DriverPerformanceReport extends Component {
     render() {
         return (
             <div className="body">
-              <Sidebar/>
+              <Sidebar>
+                 <SidebarItem title="Individual Drivers/Vehicles">
+                    <Dropright></Dropright>
+                </SidebarItem>
+                <SidebarItem title="Vehicle Groups">
+                    <Dropright></Dropright>
+                </SidebarItem>
+                <SidebarItem title="Date Range">
+                    <DateRangeDropright/>
+                </SidebarItem>
+                <SidebarItem title="Event Type">
+                    <EventTypeDropright/>
+                </SidebarItem>
+                <SidebarItem title="Actions">
+                    <ActionsDropright/>
+                </SidebarItem>
+              </Sidebar>
               <Breadcrumb className="main-breadcrumb">
                 <Breadcrumb.Item href="#">
                   Home
